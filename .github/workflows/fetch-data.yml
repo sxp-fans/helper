@@ -1,0 +1,32 @@
+name: Calls endpoint to update blockchain data
+
+on:
+  schedule:
+  - cron:  '*/5 * * * *'  # At every 5th minute.  # https://crontab.guru/
+
+
+jobs:
+  fetch-data:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Calls data endpoint (ERC20)
+      run: |
+        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_ERC20_DATA_FUNCTION_ENDPOINT }}"
+
+    - name: Calls data endpoint (BSC)
+      run: |
+        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_BSC_DATA_FUNCTION_ENDPOINT }}"
+
+    - name: Calls update timestamp endpoint (ERC20)
+      run: |
+        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_ERC20_TIMESTAMP_FETCH_ENDPOINT }}"
+
+    - name: Calls update timestamp endpoint (BSC)
+      run: |
+        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_BSC_TIMESTAMP_FETCH_ENDPOINT }}"
+
+
