@@ -2,7 +2,7 @@ name: Calls endpoint to update blockchain data
 
 on:
   schedule:
-  - cron:  '*/5 * * * *'  # At every 5th minute.  # https://crontab.guru/
+  - cron:  '*/8 * * * *'  # At every 8th minute.  # https://crontab.guru/
 
 
 jobs:
