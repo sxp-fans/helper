@@ -34,21 +34,9 @@ jobs:
         sleep 1
         curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_ERC20_TIMESTAMP_FETCH_ENDPOINT }}"
         sleep 1
-        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_ERC20_TIMESTAMP_FETCH_ENDPOINT }}"
-        sleep 1
-        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_ERC20_TIMESTAMP_FETCH_ENDPOINT }}"
-        sleep 1
-        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_ERC20_TIMESTAMP_FETCH_ENDPOINT }}"
-        sleep 1
-        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_ERC20_TIMESTAMP_FETCH_ENDPOINT }}"
-        sleep 1
-        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_ERC20_TIMESTAMP_FETCH_ENDPOINT }}"
-        sleep 1
 
     - name: Calls update timestamp endpoint (BSC)
       run: |
-        curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_BSC_TIMESTAMP_FETCH_ENDPOINT }}"
-        sleep 1
         curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_BSC_TIMESTAMP_FETCH_ENDPOINT }}"
         sleep 1
         curl "https://us-central1-${{ secrets.GOOGLE_CLOUD_PROJECT }}.cloudfunctions.net/${{ secrets.SXP_BSC_TIMESTAMP_FETCH_ENDPOINT }}"
